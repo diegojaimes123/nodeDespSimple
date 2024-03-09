@@ -11,8 +11,9 @@ const io = new Server(httpServer, {
     origin: "*"
   }
 }); 
+const conect = "mongodb+srv://jamesronderoa02:vmm7f3i1OoOHPxn3@reserva.s5okro4.mongodb.net/?retryWrites=true&w=majority&appName=reserva";
 // Conéctate a MongoDB
-mongoose.connect("mongodb+srv://jamesronderoa02:VPDuMjTIbQ4x6CL8@reserva.s5okro4.mongodb.net/?retryWrites=true&w=majority&appName=reserva", {
+mongoose.connect(conect, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
