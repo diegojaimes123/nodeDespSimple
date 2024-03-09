@@ -6,8 +6,11 @@ const mongoose = require("mongoose"); // Mongoose: una biblioteca de modelado de
 // Crear una aplicación Express
 const app = express();
 const httpServer = createServer(app); // Crear un servidor HTTP utilizando la aplicación Express
-const io = new Server(httpServer); // Inicializar el servidor de Socket.io para gestionar conexiones WebSocket
-
+const io = new Server(httpServer, {
+  cors: {
+    origin: "*"
+  }
+}); 
 // Conéctate a MongoDB
 mongoose.connect("mongodb+srv://jamesronderoa02:VPDuMjTIbQ4x6CL8@reserva.s5okro4.mongodb.net/?retryWrites=true&w=majority&appName=reserva", {
   useNewUrlParser: true,
